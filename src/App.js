@@ -13,7 +13,7 @@ class App extends Component {
     const recipeName = e.target.elements.recipeInput.value;
     e.preventDefault();
     const api_url = await fetch(
-      `https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${api_key}&q=${recipeName}&count=15`
+      `http://food2fork.com/api/search?key=${api_key}&q=${recipeName}&count=15`
     );
     const data = await api_url.json();
     this.setState({ recipes: data.recipes });
